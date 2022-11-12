@@ -9,7 +9,7 @@ N = 5 -> "4, 2"
 N = 8 -> "8, 6, 4, 2,"
 
  */
-
+// f z tve ujdjh.
 
 int SolveTasc64(int num)
 {
