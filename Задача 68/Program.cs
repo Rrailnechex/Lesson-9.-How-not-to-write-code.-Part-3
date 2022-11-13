@@ -8,7 +8,7 @@ m = 3, n = 2 -> A(m,n) = 29
 
  */
 
-
+// написал по описанию с википедии
 
 double AkkermanFnc(double n, double m)
 {

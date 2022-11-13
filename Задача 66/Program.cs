@@ -10,19 +10,24 @@ M = 1; N = 15 -> 120
 M = 4; N = 8. -> 30
  */
 
-//int[] theArray = new int[];
 
-int SolveTask66(int m, int n)
+
+int SolveTask66(int start, int trueStart, int dist)
 {
-    return m == n - 1 ? m : SolveTask66(m + 1, n) + m;
+    if (dist == 0) return start;
+    else
+        trueStart++; start = start + trueStart; dist--;
+    return SolveTask66(start, trueStart, dist);
 }
 
 
 
-Console.Write("m: ");
-int m = int.Parse(Console.ReadLine());
+Console.Write("start: ");
+int start = int.Parse(Console.ReadLine());
 
-Console.Write("n: ");
-int n = int.Parse(Console.ReadLine());
+Console.Write("end: ");
+int end = int.Parse(Console.ReadLine());
 
-Console.WriteLine($"Сумма наткральных элементов: {SolveTask66(m + 1, n)}");
+int dist = end - start;
+
+Console.WriteLine($"Сумма наткральных элементов: {SolveTask66(start, start, dist)}");
